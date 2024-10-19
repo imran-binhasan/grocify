@@ -5,8 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import addToCartProducts from '@/utils/useAddToCartData';
 import addToWishlistProducts from '@/utils/useAddToWishlist';
+import findProductsById from '@/utils/findProductsById';
 import ProductModal from './ProductModal';
-import { updateCartCount,updateWishlistCount } from '../../features/badgeSlice';
+import { updateCartCount, updateWishlistCount } from '../../features/badgeSlice';
 import { useDispatch } from 'react-redux';
 
 // Memoized Icons component to prevent re-renders
@@ -44,6 +45,7 @@ const ProductCard = ({ productDetail }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [open, setOpen] = useState(false);
     const [wishlist, setWishlist] = useState(false);
+    const [wishlistProducts, setWishlistProducts] = useState([]);
     const [addToCart, setAddToCart] = useState(false);
 
     const handleOpen = useCallback(() => setOpen(true), []);
@@ -74,6 +76,7 @@ const ProductCard = ({ productDetail }) => {
     const handleAddWishlistData = useCallback(() => {
         addToWishlistProducts(_id);
         setWishlist((prev) => !prev);
+        // badge change
         updateBadgeDataFromLocalStorage();
     }, [_id, updateBadgeDataFromLocalStorage]);
 

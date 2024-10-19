@@ -21,7 +21,8 @@ const ProductDetails = ({ productDetail }) => {
     const [wishlist, setWishlist] = useState(false);
 
     // product image
-    const [productImage, setProductImage] = useState(images[0]);
+    const [productImage, setProductImage] = useState(images?.[0] || '');
+
 
     // handle product quantity
     const [productQuantity, setProductQuantity] = useState(1);
@@ -63,8 +64,7 @@ const ProductDetails = ({ productDetail }) => {
     const handleAddWishlistData = () => {
         addToWishlistProducts(_id);
         setWishlist((prev) => !prev);
-        // badge change
-        updateBadgeDataFromLocalStorage();
+        dispatch(updateWishlistCount());
 
     };
 
@@ -78,7 +78,7 @@ const ProductDetails = ({ productDetail }) => {
                 </figure>
                 <div className='flex justify-center items-center gap-4'>
                     {
-                        images.map((image, i) => (<figure
+                        images?.map((image, i) => (<figure
                             className='h-11 md:h-14 w-12 md:w-14 border-solid border-[1px] hover:border-2 border-gray-300 hover:shadow-md cursor-pointer'
                             key={i}
                             onClick={() => setProductImage(image)}>
@@ -101,7 +101,7 @@ const ProductDetails = ({ productDetail }) => {
                         </div>
                     </div>
                     <div className='flex items-center gap-2 text-lg font-medium'>
-                        <p className='text-green-800 text-2xl'><del className='text-gray-300 text-xl font-normal'>${price.toFixed(2)}</del> ${newPrice.toFixed(2)}</p>
+                        <p className='text-green-800 text-2xl'><del className='text-gray-300 text-xl font-normal'>${price?.toFixed(2)}</del> ${newPrice?.toFixed(2)}</p>
                         <p className='text-sm text-red-500 bg-red-100 p-1 px-2 rounded-lg'>{offPercentage}% Off</p>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ const ProductDetails = ({ productDetail }) => {
                 <div className='space-y-2 text-sm text-gray-900'>
                     <p className='font-medium'>Category: <span className='font-normal text-gray-500'>{category}</span></p>
                     <div>
-                        <p className='font-medium'>Tag:{tags.map((tag, i) => (<span
+                        <p className='font-medium'>Tag:{tags?.map((tag, i) => (<span
                             className='font-normal text-gray-500'
                             key={i}> {tag}</span>))}</p>
                     </div>

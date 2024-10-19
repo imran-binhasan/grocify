@@ -5,6 +5,7 @@ import { HeartIcon } from "@radix-ui/react-icons";
 import { Separator } from "@/components/ui/separator"
 import Nav from "../common/Nav";
 import Call from "./Call";
+import Favourite from "./Favourite";
 
 const Header = () => {
     
@@ -14,7 +15,7 @@ const Header = () => {
                 <Logo />
                 <Search />
                 <div className="flex h-5 items-center space-x-4 text-sm">
-                    <HeartIcon className="w-6 h-6"/>
+                   <Favourite />
                     <Separator orientation="vertical" />
                     <CartSheet />
                 </div>

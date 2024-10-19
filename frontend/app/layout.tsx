@@ -5,6 +5,7 @@ import Providers from "@/context/Providers";
 import Header from "@/components/others/header/Header";
 import BreadcrumbNav from "@/components/others/common/BreadcrumbNav";
 import Footer from "@/components/others/footer/Footer";
+
 const outfit = Outfit({
   subsets: ["latin"],
 });

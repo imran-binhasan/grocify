@@ -12,6 +12,7 @@ import {setPageNav} from '../../features/paginationSlice'
 import { MinusIcon } from '@radix-ui/react-icons';
 
 
+
 const allCategories = ["All Categories", "Fresh Fruit", "Vegetables", "Fish", "Chicken and Meat", "Drink and Water", "Yogurt and Ice Cream", "Cake and Bread", "Butter and Cream", "Cooking"]
 
 const ProductsPage = () => {
@@ -54,13 +55,14 @@ const ProductsPage = () => {
     const categoryQuery = searchParams.query?.category || "all categories";
 
 
+
     // fetch data
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('/fakeJsonData.json');
-                let products = response.data;
-                setAllProducts(products);
+                let data = response.data;
+                setAllProducts(data);
                 setLoading(false);
             } catch (error) {
                 setError(error);
