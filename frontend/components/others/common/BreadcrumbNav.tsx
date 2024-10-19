@@ -11,6 +11,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { HomeIcon } from '@radix-ui/react-icons';
 
 const BreadcrumbNav = () => {
   const pathname = usePathname();
@@ -19,30 +20,14 @@ const BreadcrumbNav = () => {
     .filter((path) => path) // Remove any empty strings
     .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1)); // Capitalize first letter of each segment
   
-  // Handle edge case for root
-  if (pathname === '/') {
-    return (
-      <div>
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-    );
-  }
 
   return (
-    <div>
+    <div className=' mx-auto px-6 py-3 lg:py-4 lg:px-10 bg-breadcrumb bg-no-repeat object-fill'>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/"><HomeIcon className='w-5 h-5 text-white'/></Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -51,7 +36,7 @@ const BreadcrumbNav = () => {
             <>
               <BreadcrumbItem key={segment}>
                 <BreadcrumbLink asChild>
-                  <Link href={`/${pathnames.slice(0, index + 1).join('/')}`}>
+                  <Link className='text-white' href={`/${pathnames.slice(0, index + 1).join('/')}`}>
                     {segment}
                   </Link>
                 </BreadcrumbLink>

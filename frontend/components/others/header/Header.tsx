@@ -9,7 +9,7 @@ import Call from "./Call";
 const Header = () => {
     
     return (
-        <header className="md:py-2 lg:py-3 container px-6 mx-auto ">
+        <header className="md:py-2 lg:py-3 container p-1 md:px-6 mx-auto ">
             <div className="flex justify-between items-center mx-auto pb-1">
                 <Logo />
                 <Search />
