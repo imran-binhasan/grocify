@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import React from 'react';
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -33,7 +34,7 @@ const BreadcrumbNav = () => {
           <BreadcrumbSeparator />
           
           {pathnames.map((segment, index) => (
-            <>
+            <React.Fragment key={index}>
               <BreadcrumbItem key={segment}>
                 <BreadcrumbLink asChild>
                   <Link className='text-white' href={`/${pathnames.slice(0, index + 1).join('/')}`}>
@@ -42,7 +43,7 @@ const BreadcrumbNav = () => {
                 </BreadcrumbLink>
               </BreadcrumbItem>
               {index < pathnames.length - 1 && <BreadcrumbSeparator />}
-            </>
+            </React.Fragment>
           ))}
         </BreadcrumbList>
       </Breadcrumb>

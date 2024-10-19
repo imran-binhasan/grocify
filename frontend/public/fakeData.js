@@ -1,16 +1,16 @@
-import thumbnail1 from "../../assets/products/green apple/thumbnail.png"
-import greenApple1 from "../../assets/products/green apple/1.jpg"
-import greenApple2 from "../../assets/products/green apple/2.jpeg"
-import thumbnail2 from "../../assets/products/Chanise Cabbage/thumbnail.png"
-import chaniseCabbage1 from "../../assets/products/Chanise Cabbage/1.png"
-import chaniseCabbage2 from "../../assets/products/Chanise Cabbage/2.png"
+import thumbnail1 from "/products/apple/thumbnail.png"
+import greenApple1 from "/products/apple/1.jpg"
+import greenApple2 from "/products/apple/2.jpeg"
+import thumbnail2 from "/products/chinese-cabbage/thumbnail.png"
+import chineseCabbage1 from "/products/chinese-cabbage/1.png"
+import chineseCabbage2 from "/products/chinese-cabbage/2.png"
 
 import brandImg from "../../assets/brand/brand.png"
 
 
 const productDetails = [
     {
-        title: "Green Apple",
+        title: "apple",
         price: 20,
         offPercentage: 20,
         newPrice: 16,
@@ -26,7 +26,7 @@ const productDetails = [
         status: "",
     },
     {
-        title: "Green Apple",
+        title: "apple",
         price: 20,
         offPercentage: 20,
         newPrice: 16,
@@ -42,7 +42,7 @@ const productDetails = [
         status: "",
     },
     {
-        title: "Green Apple",
+        title: "apple",
         price: 20,
         offPercentage: 20,
         newPrice: 16,
@@ -63,7 +63,7 @@ const productDetails = [
         offPercentage: 20,
         newPrice: 16,
         thumbnail: thumbnail2,
-        images: [chaniseCabbage1, chaniseCabbage2],
+        images: [chineseCabbage1, chineseCabbage2],
         numOfReview: 3,
         rating: 4.5,
         brandImg: brandImg,
@@ -74,7 +74,7 @@ const productDetails = [
         status: "",
     },
     {
-        title: "Green Apple",
+        title: "apple",
         price: 20,
         offPercentage: 20,
         newPrice: 16,
@@ -95,7 +95,7 @@ const productDetails = [
         offPercentage: 20,
         newPrice: 16,
         thumbnail: thumbnail2,
-        images: [chaniseCabbage1, chaniseCabbage2],
+        images: [chineseCabbage1, chineseCabbage2],
         numOfReview: 3,
         rating: 4.5,
         brandImg: brandImg,
@@ -106,7 +106,7 @@ const productDetails = [
         status: "",
     },
     {
-        title: "Green Apple",
+        title: "apple",
         price: 20,
         offPercentage: 20,
         newPrice: 16,
@@ -127,7 +127,7 @@ const productDetails = [
         offPercentage: 20,
         newPrice: 16,
         thumbnail: thumbnail2,
-        images: [chaniseCabbage1, chaniseCabbage2],
+        images: [chineseCabbage1, chineseCabbage2],
         numOfReview: 3,
         rating: 4.5,
         brandImg: brandImg,
@@ -137,54 +137,54 @@ const productDetails = [
         tags: ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
         status: "",
     },
-    // {
-    //     title: "Green Lettuce",
-    //     price: 20,
-    //     offPercentage: 20,
-    //     newPrice: 16,
-    //     thumbnail: "",
-    //     images: [],
-    //     numOfReview: 3,
-    //     rating: 2.5,
-    //     brandImg: "",
-    //     description: "",
-    //     quantity: 5,
-    //     category: "",
-    //     tags: [],
-    //     status: "",
-    // },
-    // {
-    //     title: "Green Chili",
-    //     price: 14.99,
-    //     offPercentage: 20,
-    //     newPrice: 16,
-    //     thumbnail: "",
-    //     images: [],
-    //     numOfReview: 3,
-    //     rating: 2.5,
-    //     brandImg: "",
-    //     description: "",
-    //     quantity: 5,
-    //     category: "",
-    //     tags: [],
-    //     status: "",
-    // },
-    // {
-    //     title: "Corn",
-    //     price: 14.99,
-    //     offPercentage: 20,
-    //     newPrice: 16,
-    //     thumbnail: "",
-    //     images: [],
-    //     numOfReview: 3,
-    //     rating: 2.5,
-    //     brandImg: "",
-    //     description: "",
-    //     quantity: 5,
-    //     category: "",
-    //     tags: [],
-    //     status: "",
-    // },
+    {
+        title: "Green Lettuce",
+        price: 20,
+        offPercentage: 20,
+        newPrice: 16,
+        thumbnail: "",
+        images: [],
+        numOfReview: 3,
+        rating: 2.5,
+        brandImg: "",
+        description: "",
+        quantity: 5,
+        category: "",
+        tags: [],
+        status: "",
+    },
+    {
+        title: "Green Chili",
+        price: 14.99,
+        offPercentage: 20,
+        newPrice: 16,
+        thumbnail: "",
+        images: [],
+        numOfReview: 3,
+        rating: 2.5,
+        brandImg: "",
+        description: "",
+        quantity: 5,
+        category: "",
+        tags: [],
+        status: "",
+    },
+    {
+        title: "Corn",
+        price: 14.99,
+        offPercentage: 20,
+        newPrice: 16,
+        thumbnail: "",
+        images: [],
+        numOfReview: 3,
+        rating: 2.5,
+        brandImg: "",
+        description: "",
+        quantity: 5,
+        category: "",
+        tags: [],
+        status: "",
+    },
 ]
 
 

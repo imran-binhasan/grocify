@@ -1,9 +1,13 @@
 
 import {configureStore} from "@reduxjs/toolkit";
-import authReducer from "./features/authSlice"
+import authReducer from "./features/authSlice";
+import paginationReducer from "./features/paginationSlice"
+import badgeReducer from "./features/badgeSlice"
 export const store = configureStore({
     reducer:{
-        auth:authReducer
+        auth:authReducer,
+        pagination:paginationReducer,
+        badge:badgeReducer
     }
 })
 
