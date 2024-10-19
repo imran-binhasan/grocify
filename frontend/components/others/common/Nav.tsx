@@ -20,7 +20,7 @@ const Nav = () => {
         <div>
             <NavigationMenu>
                 <NavigationMenuList>
-                <NavigationMenuItem>
+                    <NavigationMenuItem>
                         <Link href="/" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 Home
@@ -31,7 +31,7 @@ const Nav = () => {
                         <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                               
+
                                 <ListItem href="/docs" title="Introduction">
                                     Re-usable components built using Radix UI and Tailwind CSS.
                                 </ListItem>
@@ -59,6 +59,20 @@ const Nav = () => {
                                 ))}
                             </ul>
                         </NavigationMenuContent>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/about" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                About Us
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/contact" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Contact Us
+                            </NavigationMenuLink>
+                        </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>

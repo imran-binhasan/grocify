@@ -1,8 +1,9 @@
-import Header from "@/components/ui/others/header/Header";
+import Feature from "@/components/home/Feature";
+
 export default function Home() {
   return (
     <>
-    <Header/>
+    <Feature/>
     </>
   );
 }

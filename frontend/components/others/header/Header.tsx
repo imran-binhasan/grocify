@@ -10,7 +10,7 @@ const Header = () => {
     
     return (
         <header className="md:py-2 lg:py-3 container px-6 mx-auto ">
-            <div className="flex justify-between items-center mx-auto">
+            <div className="flex justify-between items-center mx-auto pb-1">
                 <Logo />
                 <Search />
                 <div className="flex h-5 items-center space-x-4 text-sm">
